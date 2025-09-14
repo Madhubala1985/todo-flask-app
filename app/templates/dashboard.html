@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<h2>Your Projects</h2>
+<ul>
+    {% for project in projects %}
+      <li><a href="{{ url_for('main.view_project', project_id=project.id) }}">{{ project.name }}</a></li>
+    {% endfor %}
+</ul>
+<form method="post" action="{{ url_for('main.create_project') }}">
+    <input type="text" name="name" placeholder="New Project Name" required>
+    <button type="submit">Add Project</button>
+</form>
+<a href="{{ url_for('auth.logout') }}">Logout</a>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Project{% endblock %}
+{% block content %}
+<h2>{{ project.name }}</h2>
+<ul>
+    {% for task in tasks %}
+      <li>{{ task.title }} {% if task.complete %}(Done){% endif %}</li>
+    {% endfor %}
+</ul>
+<form method="post" action="{{ url_for('main.add_task', project_id=project.id) }}">
+    <input type="text" name="title" placeholder="New Task" required>
+    <button type="submit">Add Task</button>
+</form>
+<a href="{{ url_for('main.dashboard') }}">Back to Dashboard</a>
+{% endblock %}
