@@ -3,7 +3,7 @@
 A small multi-user project and task manager built with Flask. Users register, log in, create projects, and
 add tasks they can tick off. Each user sees and changes only their own data.
 
-![python](https://img.shields.io/badge/python-3.12-blue) ![flask](https://img.shields.io/badge/flask-3.1-black)
+[![tests](https://github.com/Madhubala1985/todo-flask-app/actions/workflows/tests.yml/badge.svg)](https://github.com/Madhubala1985/todo-flask-app/actions/workflows/tests.yml) ![python](https://img.shields.io/badge/python-3.12-blue) ![flask](https://img.shields.io/badge/flask-3.1-black)
 
 ## Features
 - Registration and login with hashed passwords (Werkzeug) and session handling (Flask-Login)
